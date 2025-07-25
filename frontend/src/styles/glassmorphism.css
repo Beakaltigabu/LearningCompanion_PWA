@@ -1,0 +1,108 @@
+/* Glassmorphism Base Classes */
+.glass {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  border-radius: 12px;
+}
+
+.glass-light {
+  background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.glass-dark {
+  background-color: rgba(17, 25, 40, 0.75);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* Neumorphism Elements */
+.neuro-light {
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+
+.neuro-dark {
+  background: linear-gradient(145deg, #2a2a2a, #1e1e1e);
+  box-shadow: 20px 20px 60px #1a1a1a, -20px -20px 60px #2e2e2e;
+}
+
+.neuro-inset-light {
+  background: linear-gradient(145deg, #cacaca, #f0f0f0);
+  box-shadow: inset 20px 20px 60px #bebebe, inset -20px -20px 60px #ffffff;
+}
+
+.neuro-inset-dark {
+  background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
+  box-shadow: inset 20px 20px 60px #1a1a1a, inset -20px -20px 60px #2e2e2e;
+}
+
+/* Theme-specific gradients */
+.gradient-moon {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.gradient-sunshine {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+/* Interactive elements */
+.glass-button {
+  @apply glass transition-all duration-300 hover:scale-105 active:scale-95;
+  transform-style: preserve-3d;
+}
+
+.glass-card {
+  @apply glass transition-all duration-300 hover:shadow-2xl;
+}
+
+/* Microinteractions */
+.bounce-in {
+  animation: bounceIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.fade-slide-up {
+  animation: fadeSlideUp 0.5s ease-out;
+}
+
+.pulse-glow {
+  animation: pulseGlow 2s infinite;
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.8);
+  }
+}

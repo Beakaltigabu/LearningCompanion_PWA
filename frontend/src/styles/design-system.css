@@ -1,0 +1,482 @@
+/* Design System CSS Variables and Utilities */
+
+:root {
+  /* Sunshine Theme Variables - Bright and cheerful for children */
+  --sunshine-primary: #FFD700;
+  --sunshine-secondary: #FFA500;
+  --sunshine-accent: #87CEEB;
+  --sunshine-background: #F0FFF0;
+  --sunshine-surface: #FFFEF7;
+  --sunshine-text: #2F4F4F;
+  --sunshine-text-secondary: #4A5568;
+  --sunshine-border: #E2E8F0;
+
+  /* Moon Theme Variables - Soft and calming for children (not as dark as admin) */
+  --moon-primary: #9BB5FF;
+  --moon-secondary: #B19CD9;
+  --moon-accent: #FFB6C1;
+  --moon-background: #4A5568;
+  --moon-surface: #5A6B7D;
+  --moon-text: #F7FAFC;
+  --moon-text-secondary: #E2E8F0;
+  --moon-border: #6B7280;
+
+  /* Admin Light Theme Variables */
+  --admin-light-primary: #3B82F6;
+  --admin-light-secondary: #6366F1;
+  --admin-light-accent: #8B5CF6;
+  --admin-light-background: #FFFFFF;
+  --admin-light-surface: #F8FAFC;
+  --admin-light-text: #1F2937;
+  --admin-light-text-secondary: #6B7280;
+  --admin-light-border: #E5E7EB;
+
+  /* Admin Dark Theme Variables */
+  --admin-dark-primary: #60A5FA;
+  --admin-dark-secondary: #818CF8;
+  --admin-dark-accent: #A78BFA;
+  --admin-dark-background: #111827;
+  --admin-dark-surface: #1F2937;
+  --admin-dark-text: #F9FAFB;
+  --admin-dark-text-secondary: #D1D5DB;
+  --admin-dark-border: #374151;
+
+  /* Neumorphic Shadow Variables */
+  --neumorphic-shadow-light: #ffffff;
+  --neumorphic-shadow-dark: #d9e0d9;
+
+  /* Animation Variables */
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+
+  /* Easing Functions */
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Theme Classes */
+.theme-sunshine {
+  --color-primary: var(--sunshine-primary);
+  --color-secondary: var(--sunshine-secondary);
+  --color-accent: var(--sunshine-accent);
+  --color-background: var(--sunshine-background);
+  --color-surface: var(--sunshine-surface);
+  --color-text: var(--sunshine-text);
+  --color-text-secondary: var(--sunshine-text-secondary);
+  --color-border: var(--sunshine-border);
+  /* Neumorphic Colors */
+  --color-neumorphic-shadow-light: #ffffff;
+  --color-neumorphic-shadow-dark: #d9e0d9;
+}
+
+.theme-moon {
+  --color-primary: var(--moon-primary);
+  --color-secondary: var(--moon-secondary);
+  --color-accent: var(--moon-accent);
+  --color-background: var(--moon-background);
+  --color-surface: var(--moon-surface);
+  --color-text: var(--moon-text);
+  --color-text-secondary: var(--moon-text-secondary);
+  --color-border: var(--moon-border);
+  /* Neumorphic Colors */
+  --color-neumorphic-shadow-light: #6B7280;
+  --color-neumorphic-shadow-dark: #374151;
+}
+
+.theme-admin-light {
+  --color-primary: var(--admin-light-primary);
+  --color-secondary: var(--admin-light-secondary);
+  --color-accent: var(--admin-light-accent);
+  --color-background: var(--admin-light-background);
+  --color-surface: var(--admin-light-surface);
+  --color-text: var(--admin-light-text);
+  --color-text-secondary: var(--admin-light-text-secondary);
+  --color-border: var(--admin-light-border);
+}
+
+.theme-admin-dark {
+  --color-primary: var(--admin-dark-primary);
+  --color-secondary: var(--admin-dark-secondary);
+  --color-accent: var(--admin-dark-accent);
+  --color-background: var(--admin-dark-background);
+  --color-surface: var(--admin-dark-surface);
+  --color-text: var(--admin-dark-text);
+  --color-text-secondary: var(--admin-dark-text-secondary);
+  --color-border: var(--admin-dark-border);
+}
+
+/* Define custom utility classes in components layer */
+@layer components {
+  /* Child-specific border radius */
+  .rounded-child {
+    border-radius: 1rem;
+  }
+
+  .rounded-child-lg {
+    border-radius: 1.5rem;
+  }
+
+  .rounded-child-xl {
+    border-radius: 2rem;
+  }
+
+  /* Child-specific font styles */
+  .font-child {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 500;
+  }
+
+  .text-child-base {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .text-child-lg {
+    font-size: 1.125rem;
+    line-height: 1.5;
+  }
+
+  /* Admin-specific font styles */
+  .font-admin {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 400;
+  }
+
+  /* Shadow utilities */
+  .shadow-child-card {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  .shadow-admin-card {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  }
+
+  /* Glassmorphism Utilities */
+  .glassmorphic-child {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 1rem;
+  }
+
+  .glassmorphic-admin {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.5rem;
+  }
+
+  /* Neumorphism Utilities */
+  .neumorphic-card, .neumorphic-button, .neumorphic-input {
+    background-color: var(--color-background);
+    transition: all var(--duration-normal) var(--ease-in-out);
+  }
+
+  .neumorphic-card {
+    border-radius: 1.5rem;
+    box-shadow: 8px 8px 16px var(--color-neumorphic-shadow-dark), -8px -8px 16px var(--color-neumorphic-shadow-light);
+  }
+
+  .neumorphic-input {
+    border-radius: 0.75rem;
+    box-shadow: inset 5px 5px 10px var(--color-neumorphic-shadow-dark), inset -5px -5px 10px var(--color-neumorphic-shadow-light);
+  }
+
+  .neumorphic-button {
+    border-radius: 0.75rem;
+    box-shadow: 5px 5px 10px var(--color-neumorphic-shadow-dark), -5px -5px 10px var(--color-neumorphic-shadow-light);
+  }
+
+  .neumorphic-button:hover {
+    transform: translateY(-1px);
+  }
+
+  .neumorphic-button:active {
+    box-shadow: inset 5px 5px 10px var(--color-neumorphic-shadow-dark), inset -5px -5px 10px var(--color-neumorphic-shadow-light);
+    transform: translateY(0);
+    font-size: 0.98em;
+  }
+
+  /* Child-Specific Design Patterns */
+  .child-button {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 12px;
+    border-radius: 1rem;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scale(1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  .child-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+
+  .child-button:active {
+    transform: scale(0.95);
+  }
+
+  .child-card {
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .child-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    transform: translateY(-4px);
+  }
+
+  .child-input {
+    border-radius: 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 500;
+    border: 2px solid transparent;
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .child-input:focus {
+    border-opacity: 0.5;
+  }
+
+  /* Admin-Specific Design Patterns */
+  .admin-button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .admin-button:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  .admin-button:active {
+    transform: scale(0.95);
+  }
+
+  .admin-card {
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .admin-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+
+  .admin-input {
+    border-radius: 0.375rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 400;
+    border: 1px solid;
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .admin-input:focus {
+    ring: 2px;
+    ring-opacity: 0.5;
+  }
+
+  /* Custom scrollbar utilities */
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(var(--border)) transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: rgb(var(--border));
+    border-radius: 3px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(var(--border-hover));
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Responsive Admin Layout Styles */
+  .admin-sidebar {
+    background-color: rgba(var(--surface), 0.95);
+    backdrop-filter: blur(4px);
+    border-right: 1px solid rgb(var(--border));
+  }
+
+  .admin-sidebar-mobile {
+    position: fixed;
+    top: 4rem;
+    bottom: 0;
+    left: 0;
+    z-index: 40;
+    width: 20rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  .admin-sidebar-desktop {
+    position: sticky;
+    top: 4rem;
+    height: calc(100vh - 4rem);
+    width: 20rem;
+  }
+
+  .admin-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    margin: 0 0.5rem;
+    border-radius: 0.5rem;
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .admin-nav-item-active {
+    background-color: rgb(var(--primary));
+    color: rgb(var(--primary-foreground));
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  .admin-nav-item-inactive {
+    color: rgb(var(--text-primary));
+  }
+
+  .admin-nav-item-inactive:hover {
+    background-color: rgb(var(--surface-hover));
+    color: rgb(var(--primary));
+  }
+
+  .admin-main-content {
+    flex: 1;
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+/* Microinteractions */
+@layer utilities {
+  .bounce-on-hover {
+    transition: transform var(--duration-normal) var(--ease-bounce);
+  }
+
+  .bounce-on-hover:hover {
+    transform: translateY(-2px);
+  }
+
+  .scale-on-hover {
+    transition: transform var(--duration-fast) var(--ease-in-out);
+  }
+
+  .scale-on-hover:hover {
+    transform: scale(1.05);
+  }
+
+  .glow-on-focus:focus {
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+  }
+
+  /* Accessibility */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .child-button,
+  .admin-button {
+    border: 2px solid currentColor;
+  }
+
+  .child-card,
+  .admin-card {
+    border: 1px solid currentColor;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .glassmorphic,
+  .glassmorphic-child,
+  .glassmorphic-admin {
+    background: white !important;
+    backdrop-filter: none !important;
+    border: 1px solid #ccc !important;
+  }
+
+  .neumorphic-button,
+  .neumorphic-card {
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+  }
+}
+
+/* Responsive breakpoints for admin layout */
+@media (max-width: 1023px) {
+  .admin-sidebar-toggle {
+    display: block;
+  }
+
+  .admin-sidebar-desktop {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .admin-sidebar-toggle {
+    display: none;
+  }
+
+  .admin-sidebar-mobile {
+    position: static;
+    width: 20rem;
+    box-shadow: none;
+  }
+}

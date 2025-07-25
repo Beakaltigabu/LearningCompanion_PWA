@@ -1,0 +1,74 @@
+{
+  "common": {
+    "save": "አስቀምጥ",
+    "cancel": "ሰርዝ",
+    "back": "ተመለስ",
+    "next": "ቀጣይ",
+    "close": "ዝጋ",
+    "yes": "አዎ",
+    "no": "አይ",
+    "try_again": "እንደገና ሞክር",
+    "loading": "በመጫን ላይ...",
+    "friend": "ወዳጅ"
+  },
+  "role_selection": {
+    "choose_your_role": "ሚናህን ምረጥ",
+    "select_how_you_want_to_use": "የመማሪያ ጓደኛን እንዴት መጠቀም እንደምትፈልግ ምረጥ",
+    "im_a_parent": "እኔ ወላጅ ነኝ",
+    "manage_children_and_settings": "የልጆች መገለጫዎችን እና የመማሪያ ቅንብሮችን ያስተዳድሩ",
+    "im_a_child": "እኔ ልጅ ነኝ",
+    "start_learning_and_playing": "መማር እና ትምህርታዊ ጨዋታዎችን መጫወት ጀምር"
+  },
+  "child_selection": {
+    "select_your_profile": "መገለጫህን ምረጥ",
+    "choose_profile_to_continue": "ለመቀጠል መገለጫህን ምረጥ",
+    "no_profiles_found": "ምንም መገለጫዎች አልተገኙም",
+    "ask_parent_to_create_profile": "ወላጅህ መገለጫ እንዲፈጥርልህ ጠይቅ",
+    "back_to_role_selection": "ወደ ሚና ምርጫ ተመለስ"
+  },
+  "pin_entry": {
+    "enter_your_pin": "ፒንህን አስገባ",
+    "enter_4_digit_pin": "ለመቀጠል 4-አሃዝ ፒንህን አስገባ",
+    "incorrect_pin": "ስህተተኛ ፒን። እባክህ እንደገና ሞክር።",
+    "user_not_found": "ተጠቃሚ አልተገኘም",
+    "welcome_back_user": "እንኳን ደህና መጣህ {{username}}!"
+  },
+  "navigation": {
+    "home": "ቤት",
+    "learn": "ተማር",
+    "discover": "ያግኙ",
+    "chat": "ውይይት",
+    "rewards": "ሽልማቶች",
+    "profile": "መገለጫ"
+  },
+  "dashboard": {
+    "today": "ዛሬ",
+    "welcome_back": "እንኳን ደህና መጣህ {{name}}!",
+    "ready_to_learn_today": "ዛሬ አስደናቂ ነገር ለመማር ዝግጁ ነህ?",
+    "points": "ነጥቦች",
+    "keep_learning_to_earn_more": "ተጨማሪ ነጥቦች ለማግኘት መማርን ቀጥል!",
+    "continue_your_lessons": "የመማሪያ ጉዞህን ቀጥል",
+    "see_your_achievements": "ሽልማቶችህን እና ስኬቶችህን ተመልከት",
+    "daily_habits": "የዕለት ተዕለት ልማዶች",
+    "track_daily_habits": "የዕለት ተዕለት ልማዶችህን እና ሩቲንህን ተከታተል",
+    "customize_your_profile": "መገለጫህን እና ማስኮትህን አበጅ",
+    "todays_missions": "የዛሬ ተልእኮዎች",
+    "complete_math_lesson": "የሂሳብ ትምህርት አጠናቅቅ",
+    "read_for_20_minutes": "ለ20 ደቂቃ አንብብ",
+    "practice_writing": "መጻፍን ተለማመድ"
+  },
+  "profile": {
+    "my_profile": "የእኔ መገለጫ",
+    "child_profile_settings": "የልጅ መገለጫ ቅንብሮች እዚህ ይተገበራሉ",
+    "name": "ስም",
+    "age": "እድሜ",
+    "grade": "ክፍል",
+    "points": "ነጥቦች",
+    "level": "ደረጃ",
+    "progress": "እድገት",
+    "achievements": "ስኬቶች",
+    "rewards": "ሽልማቶች"
+  },
+  "notifications": "ማሳወቂያዎች",
+  "child": "ልጅ"
+}
